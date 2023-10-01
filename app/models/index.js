@@ -22,4 +22,13 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
+db.user = require("../models/user.model.js")(sequelize, Sequelize);
+db.task = require("../models/task.model.js")(sequelize, Sequelize);
+
+db.user.hasMany(db.task, { as: "tasks" });
+db.task.belongsTo(db.user, {
+  foreignKey: "userId",
+  as: "user",
+});
+
 module.exports = db;
