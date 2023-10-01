@@ -10,7 +10,7 @@ node server.js
 
 ### Database
 
-1.- Create database empty databse in Mysql\n2.- Copy credentials in path app/config/db.config.js
+1.- Create database empty databse in Mysql <br />2.- Copy credentials in path app/config/db.config.js
 
 ```
 module.exports = {
